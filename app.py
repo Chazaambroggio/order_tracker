@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 import sqlite3
 import pandas as pd
+import webbrowser
 
 app = Flask(__name__)
 
@@ -110,6 +111,9 @@ def item_details(ack, style, item):
 
 
 if __name__ == '__main__':
-
+	
+	webbrowser.open('http://127.0.0.1:5000/')
+	
 	app.run(debug = True)
 
+	
