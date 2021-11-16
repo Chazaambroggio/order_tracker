@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+
+	<div>
+
+		<h1>Searching for ack: {{ack}}</h1>
+
+		<form action="/{{ack}}">
+			<input type="submit" value="Back" id="button">
+		</form>
+
+		<table>
+			<tr>
+				<th>Style: {{style}}</th>
+			</tr>
+
+			{% for item in item_list %}
+			
+			<tr>
+				<td><a href="/{{ack}}/{{style}}/{{item}}">{{item}}</a></td>
+			</tr>
+
+			{% endfor %}
+			
+		</table>
+	</div>
+
+</body>
+</html>
