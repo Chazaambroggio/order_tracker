@@ -9,6 +9,8 @@ Project created with:
 
 ## Requeriments
 - Pandas version: 1.3.4
+- Flask version: 2.0.2
+- Pandas version: 1.3.4
 
 ## Installation
 
